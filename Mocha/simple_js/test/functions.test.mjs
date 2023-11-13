@@ -5,7 +5,7 @@ import {expect} from "chai";
 it("Pending test will not pass or fail");
 
 describe("Math", function () {
-    it("Add two numbers", function () {
+    it("Adds two numbers", function () {
         let result = sum(1, 2);
         expect(result).to.equal(3);
     })
