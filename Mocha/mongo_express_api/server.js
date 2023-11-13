@@ -31,7 +31,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-
 //connect to the MongoDB using Mongoose ODM
 mongoose.connect (
   process.env.DBHOST,  { useUnifiedTopology: true, useNewUrlParser: true }
