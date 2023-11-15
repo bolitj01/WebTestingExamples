@@ -3,5 +3,5 @@
  * the LIFO (Last In, First Out) principle.
  */
 class Stack {
-
+    
 }
