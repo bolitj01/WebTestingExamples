@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
 jobs:
   
   test:
@@ -27,6 +30,7 @@ jobs:
       
       - name: NPM install, build and test
         run: |
+          cd Mocha/mongo_express_api
           npm install
           npm test
         env:
