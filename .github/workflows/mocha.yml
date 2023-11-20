@@ -1,4 +1,4 @@
-name: Node.JS CI/CD
+name: Mocha Tests
 
 on:
   push:
