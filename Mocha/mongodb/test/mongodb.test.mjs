@@ -10,11 +10,12 @@ describe('insert', function() {
 
   before(async function() {
     config();
-    connection = new MongoClient(process.env.MONGO_URI, {
+    const remoteurl = "mongodb+srv://chester_the_tester:pfwcs@pfw-cs.ctovaum.mongodb.net/?retryWrites=true&w=majority&appName=pfw-cs";
+    connection = new MongoClient(remoteurl, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    db = connection.db(process.env.MOCHA_DB);
+    db = connection.db("mocha_test");
     users = db.collection("users");
     users.deleteMany({});
   });

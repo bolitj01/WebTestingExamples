@@ -70,13 +70,16 @@ const App = () => {
 				<h3 className={style.heading}>Todo</h3>
 				<form onSubmit={createTodo} className={style.form}>
 					<input
+						data-testid="todo-text"
 						value={input}
 						onChange={(e) => setInput(e.target.value)}
 						className={style.input}
 						type="text"
 						placeholder="Add your todo..."
 					/>
-					<button className={style.button}>
+					<button 
+					data-testid="todo-add"
+					className={style.button}>
 						<AiOutlinePlus size={30} />
 					</button>
 				</form>
