@@ -1,0 +1,20 @@
+.addParticipant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    gap: 15px;
+
+    input {
+        font-size: inherit;
+    }
+
+    button {
+        font-size: inherit;
+        background-color: aliceblue;
+        padding: 7px;
+        border: 1px darkgray solid;
+        border-radius: 10px;
+    }
+}

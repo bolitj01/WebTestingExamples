@@ -1,0 +1,13 @@
+/* RoomGrid.module.css */
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    width: 80vw;
+    height: 60vh;
+  }
+  
