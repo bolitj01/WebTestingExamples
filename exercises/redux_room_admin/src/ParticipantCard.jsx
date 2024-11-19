@@ -4,6 +4,7 @@ import styles from "./styles/ParticipantCard.module.css";
 const ParticipantCard = ({ participant, onDragStart }) => {
   return (
     <p
+      data-testid="participant-name"
       key={participant.id}
       draggable
       onDragStart={(e) => {

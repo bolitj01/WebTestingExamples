@@ -105,6 +105,13 @@ app.post("/join", async (req, res) => {
   }
 });
 
+//Delete all participants from rooms
+app.delete("/delete-participants", async (req, res) => {
+  await Participant.deleteMany({});
+  await Room.updateMany({}, { $set: { participants: [] } });
+  res.send("Deleted all participants");
+});
+
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });

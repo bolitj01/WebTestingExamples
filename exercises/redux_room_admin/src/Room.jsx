@@ -34,6 +34,7 @@ const Room = ({ roomIndex }) => {
 
   return (
     <div
+      data-testid={`room-${roomIndex}`}
       className={styles.roomContainer}
       onDrop={handleDrop}
       onDragOver={handleDragOver}

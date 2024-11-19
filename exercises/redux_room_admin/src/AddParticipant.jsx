@@ -29,6 +29,7 @@ const AddParticipant = () => {
     >
       <label htmlFor="name">Name</label>
       <input
+        data-testid="name-text"
         required
         type="text"
         name="name"
@@ -37,6 +38,7 @@ const AddParticipant = () => {
         ref={nameTxt}
       />
       <button
+        data-testid="add-button"
         onClick={async () => {
           const participant = await createParticipant(nameTxt.current.value);
           dispatch(addParticipant(participant));

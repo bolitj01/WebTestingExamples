@@ -7,6 +7,7 @@
     "dev": "concurrently \"npm run client\" \"npm run server\"",
     "client": "vite",
     "server": "nodemon --inspect server.js",
+    "test": "cypress open",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
