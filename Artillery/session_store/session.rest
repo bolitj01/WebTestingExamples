@@ -1,0 +1,24 @@
+@HOST = http://localhost:8080
+@USERNAME = tommy
+@PASSWORD = webdeviscool
+@USERNAME2 = haley
+
+POST {{HOST}}/signup HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+username={{USERNAME}}&password={{PASSWORD}}
+
+###
+
+POST {{HOST}}/login HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+username={{USERNAME}}&password={{PASSWORD}}
+
+###
+
+GET {{HOST}}/profile HTTP/1.1
+
+###
+
+GET {{HOST}}/logout HTTP/1.1

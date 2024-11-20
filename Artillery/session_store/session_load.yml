@@ -1,0 +1,40 @@
+config:
+  target: "http://localhost:8080"
+  phases:
+    - name: "steady load"
+      duration: 10
+      arrivalRate: 5
+    - name: "ramp up"
+      duration: 10
+      arrivalRate: 5
+      rampTo: 30
+    - name: "slown down"
+      duration: 10
+      arrivalRate: 30
+      rampTo: 5
+  defaults:
+    headers:
+      Content-Type: "application/x-www-form-urlencoded"
+  plugins:
+    fake-data: {} # Falso plugin to fake data for the user
+
+scenarios:
+  - flow:
+    - post:
+        log: "Creating user"
+        url: "/signup"
+        form:
+          username: "{{ $randUserName() }}" # fake-data plugin function
+          password: "webdeviscool"
+        capture:
+          - json: "$.username"
+            as: "username"
+    - post:
+        log: "Logging in {{ $username }}"
+        url: "/login"
+        form:
+          username: "{{ username }}" # Reuse the username from the previous request result
+          password: "webdeviscool"
+    - get:
+        log: "Getting profile {{ $username }}"
+        url: "/profile"
