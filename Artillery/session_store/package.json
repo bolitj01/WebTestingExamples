@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon --inspect session_example.mjs",
-    "test": "cross-env DEBUG=http* artillery run session_load.yml"
+    "test": "artillery run session_load.yml"
   },
   "keywords": [],
   "author": "",

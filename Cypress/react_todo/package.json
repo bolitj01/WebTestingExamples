@@ -7,7 +7,7 @@
 		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview",
-		"test": "cypress open"
+		"test": "cypress run"
 	},
 	"dependencies": {
 		"firebase": "^9.17.2",

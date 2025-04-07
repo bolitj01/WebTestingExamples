@@ -3,15 +3,15 @@ config:
   phases:
     - name: "steady load"
       duration: 5
-      arrivalRate: 3
+      arrivalRate: 20
     - name: "ramp up"
       duration: 5
       arrivalRate: 5
-      rampTo: 15
-    - name: "slown down"
+      rampTo: 100
+    - name: "slow down"
       duration: 5
       arrivalRate: 15
-      rampTo: 3
+      rampTo: 10
   defaults:
     headers:
       Content-Type: "application/x-www-form-urlencoded"
