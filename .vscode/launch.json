@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Mocha Tests Currently Open",
+      "type": "node",
+      "request": "launch",
+
+      // Run Mocha directly
+      // Assumes the test folder is one directory below the node_modules folder
+      "program": "${fileDirname}/../node_modules/mocha/bin/_mocha",
+
+      // Required for ESM tests
+      "args": [
+        "--experimental-modules",
+        "--timeout", "999999",
+        "--colors",
+        "${file}" // Run the currently open test file
+      ],
+
+      "cwd": "${workspaceFolder}",
+      "internalConsoleOptions": "openOnSessionStart",
+      "skipFiles": ["<node_internals>/**"],
+      "outputCapture": "std"
+    }
+  ]
+}
