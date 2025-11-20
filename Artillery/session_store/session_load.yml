@@ -2,14 +2,14 @@ config:
   target: "http://localhost:8080"
   phases:
     - name: "steady load"
-      duration: 5
+      duration: 10
       arrivalRate: 20
     - name: "ramp up"
-      duration: 5
+      duration: 10
       arrivalRate: 5
       rampTo: 100
     - name: "slow down"
-      duration: 5
+      duration: 10
       arrivalRate: 15
       rampTo: 10
   defaults:

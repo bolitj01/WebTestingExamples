@@ -30,6 +30,12 @@ const port = 8080;
 
 app.use(express.json());
 
+app.post("/clear-database", async (req, res) => {
+  await Participant.deleteMany({});
+  await Room.deleteMany({});
+  res.send("Cleared database");
+});
+
 app.post("/create-rooms", async (req, res) => {
   const { roomCount } = req.body;
   for (let i = 0; i < roomCount; i++) {

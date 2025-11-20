@@ -95,7 +95,7 @@ const App = () => {
 				</ul>
 
 				{todos.length < 1 ? null : (
-					<p className={style.count}>{`You have ${todos.length} todos`}</p>
+					<p data-testid="count" className={style.count}>{`You have ${todos.length} todos`}</p>
 				)}
 			</div>
 		</div>

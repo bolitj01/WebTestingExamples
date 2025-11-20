@@ -18,9 +18,7 @@ const WaitingRoom = () => {
   return (
     <div className={styles.container}>
       <h3>Waiting Room</h3>
-      <div 
-      data-testid="waiting-room"
-      className={styles.waitingRoom}>
+      <div data-testid="waiting-room" className={styles.waitingRoom}>
         {participants.map((p) => (
           <ParticipantCard key={p.id} participant={p} />
         ))}
